@@ -17,6 +17,8 @@ public class Flight {
         this.bookedSeat = bookedSeat;
     }
 
+
+
     public String getFlightNumber(){ return flightNumber; }
 
     public  void setFlightNumber(String flightNumber){ this.flightNumber = flightNumber; }
@@ -33,6 +35,15 @@ public class Flight {
 
     public  void setBookedSeat(int bookedSeat){ this.bookedSeat = bookedSeat; }
 
+    public String getFlightDetails() {
+        return "flightNumber=" + flightNumber + " , capacity=" +  capacity +  ", bookedSeat=" + bookedSeat +  ", bookedSeat=" + airline;
+    }
+     public boolean checkAvailability(){
+        return  this.bookedSeat<capacity;
+     }
+     public void incrementBookingCounter(){
+        bookedSeat++;
+     }
     @Override
     public String toString() {
         return "Flight{" +

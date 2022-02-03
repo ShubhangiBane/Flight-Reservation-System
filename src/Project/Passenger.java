@@ -15,9 +15,7 @@ public class Passenger {
         this.contact = new Contact( name, phone, email);
         idCounter++;
     }
-    public static  int getPassengerCount(){
-      return idCounter;
-    }
+
     public int getId(){ return id; }
 
     public  void setId(int id){ this.id = id; }
@@ -29,6 +27,13 @@ public class Passenger {
     public Contact getContact(){ return contact; }
 
     public  void setContact(Contact contact){ this.contact = contact; }
+
+
+
+    public Contact getContact(Contact contact) {return contact;}
+    public Address getAddress(Address Address) {return address;}
+    public static  int getPassengerCount(){return idCounter;}
+
 
     @Override
     public String toString() {
